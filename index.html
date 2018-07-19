@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+</head>
+<body>
+<header>
+    <h1>Flight Booking System</h1>
+</header>
+<div class="container">
+    <div class="left-section">
+        <div class="search">       
+                    <div  class="left-pane">
+                            <label for="airline" class="labelSearch">Air Line</label>
+                            <select name="airline" id="airline">
+                                <option value="" selected>-Select-</option>
+                                <option value="Spice">Spice</option>
+                                <option value="Indigo">Indigo</option>                        
+                            </select>
+                    </div> 
+                    <div class="left-pane" >
+                            <label for="start-time" class="labelSearch">Time (24 Hour)</label>
+                            <select name="start-time" id="start-time">
+                                <option value="" selected>N/A</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>                        
+                                <option value="3">3</option>                        
+                                <option value="4">4</option>                        
+                                <option value="5">5</option>                        
+                                <option value="6">6</option>                        
+                            </select>
+                        </div> 
+                    <div class="left-pane" >
+                            <label for="price" class="labelSearch">Price </label>
+                            <select name="start-time" id="price">
+                                <option value="0" selected>N/A</option>
+                                <option value="1000">1000</option>
+                                <option value="2000">2000</option>                        
+                                <option value="3000">3000</option>                        
+                                <option value="4000">4000</option>                        
+                                <option value="5000">5000</option>                        
+                                <option value="6000">6000</option>                        
+                                <option value="7000">7000</option>                        
+                            </select>
+                    </div> 
+                    <div class="left-pane" >
+                        <label for="classBuss" class="labelSearch">Class </label>
+                        <select name="start-time" id="classBuss">
+                            <option value="" selected>N/A</option>
+                            <option value="eco">Economy</option>
+                            <option value="buss">Bussiness</option>                        
+                        </select>
+                    </div>
+                    <div class="left-pane" >
+                        <div  class="search">
+                            <button id="specificSearchBtn">Filter</button>
+                        </div>
+                    </div>
+                
+    </div>
+</div>
+<div class="flight-form">
+    <section>
+                <div>
+                    <div class="left-pane" >
+                        <label for="selectForm">From</label>
+                        <select name="selectForm" id="selectForm">
+                            <option value="del">Delhi</option>
+                            <option value="bom">Bombay</option>                        
+                        </select>
+                    </div>
+                    <div  class="right-pane">
+                            <label for="toForm">TO</label>
+                            <select name="toForm" id="toForm">
+                                <option value="del">Delhi</option>
+                                <option value="bom">Bombay</option>                        
+                            </select>
+                    </div>
+                </div>
+                <div class="economySection">
+                    <div class="" >
+                        <span>
+                                <label for="classBusiness">Class</label>
+                                <select name="classBusiness" id="classBusiness">
+                                    <option value="eco">Economy</option>
+                                    <option value="buss">Bussiness</option>                        
+                                </select>
+                        </span>
+                        <span>
+                            <label for="passenger">Passenger</label>
+                            <select name="passenger" id="passenger">
+                                <option value="1">1</option>
+                                <option value="2">2</option>                        
+                                <option value="3">3</option>                        
+                                <option value="4">4</option>                        
+                            </select>
+                        </span>                                    
+                    </div> 
+                </div>
+                <div class="radioSection">
+                    <div class="" >
+                        <span>
+                                <label  for="oneWay">One Way</label>
+                                <input type="radio" onclick="flightWay()" class="radiobtn" value="one" id="oneWay" name="flightReturn">
+                        </span>
+                        <span>
+                                <label for="twoWay">Two Way</label>
+                                <input type="radio" onclick="flightWay()" class="radiobtn" value="two" id="twoWay" name="flightReturn">
+                        </span>                                    
+                    </div> 
+                </div>  
+                <div class="dateSection">
+                        <div>
+                            <span id="departDateDiv">
+                                    <label for="departDate">Depart</label>
+                                    <input type="date" id="departDate" name="depart">
+                            </span>
+                            <span id="returnDateDiv">
+                                    <label for="returnDate">Return</label>
+                                    <input type="date" id="returnDate" name="return">
+                            </span>                                    
+                        </div> 
+                </div>                            
+                <div>
+                    <div  class="search">
+                            <button id="btnSearch">Search</button>
+                    </div>
+                </div>                 
+    </section>    
+</div>
+
+<div id="result">
+        <div>
+                <p id="resultHeader">
+                    <span class="headTitle">From</span>
+                    <span class="headTitle">To</span>
+                    <span class="headTitle">Price</span>
+                    <span class="headTitle">Air Line</span>
+                </p>
+                <div id="resultData">
+                   
+                </div>
+            </div>
+    
+
+</div>
+</div>
+<script src="build/main.bundle.js"></script>
+</body>
+</html>
