@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     padding: 0;
     margin: 0;
-    background: url(../js/img/1.jpg) no-repeat 0px 0px;
+    background: url(../js/img/2.jpg) no-repeat 0px 0px;
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
     background-attachment: fixed;
@@ -52,3 +52,16 @@ button{height:40px;width:100px;background-color: #FFC107;
 .headTitle{margin:50px;font-size: 30px;font-weight: bolder;}
 
 .show-result-data{margin:50px;padding-left:30px;font-weight: bold;}
+.tbHead td{ 
+        padding: 15px;
+        text-align: left; 
+        font-size: 25px;
+        background-color: #FFC107;
+        border: 1px solid #FFC107;
+}
+
+.trbody td{ 
+    padding: 15px;
+    text-align: left; 
+    font-size: 20px;
+}

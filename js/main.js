@@ -20,6 +20,15 @@ document.getElementsByName("return")[0].setAttribute('min', today);
   var filterData ={};
   var search = (filterData) => {
     let arrData = "";
+    let flightFound = false;
+    arrData += `
+                <tr class="tbHead">
+                    <td >Source</td>
+                    <td >Destination </td>
+                    <td >Fare</td>
+                    <td >Airline</td>
+                </tr>
+    `
     let departDate = filterData.departDate;
     let seatType = filterData.class ? filterData.class : "eco";
     let price = filterData.price ? filterData.price : 0;
@@ -27,26 +36,28 @@ document.getElementsByName("return")[0].setAttribute('min', today);
     flightJson.forEach((ele) => {
       let sd = new Date(ele.departDate);
       if(ele.to == filterData.to  && ele.from == filterData.from) {
-          if(+sd <= +departDate) {
+          if(+sd === +departDate) {
             if ((ele.class == seatType && ele.price >= price)) {
               if(ele.airline === airline) {
+                flightFound = true;
                   arrData += ` 
-                                    <p>
-                                        <span class="show-result-data">${ele.from}</span>
-                                        <span class="show-result-data"> ${ele.to}</span>
-                                        <span class="show-result-data">${ele.price}</span>
-                                        <span class="show-result-data">${ele.airline}</span>
-                                    </p>                          
+                                    <tr class="trbody">
+                                        <td >${ele.from}</td>
+                                        <td > ${ele.to}</td>
+                                        <td >${ele.price}</td>
+                                        <td >${ele.airline}</td>
+                                    </tr>                          
                   `
                   
               } else if(!airline) {
+                flightFound = true;
                   arrData += ` 
-                                    <p>
-                                        <span class="show-result-data">${ele.from}</span>
-                                        <span class="show-result-data"> ${ele.to}</span>
-                                        <span class="show-result-data">${ele.price}</span>
-                                        <span class="show-result-data">${ele.airline}</span>
-                                    </p>                          
+                                    <tr class="trbody">
+                                        <td >${ele.from}</td>
+                                        <td > ${ele.to}</td>
+                                        <td >${ele.price}</td>
+                                        <td >${ele.airline}</td>
+                                    </tr>                          
                   `
               }
             } 
@@ -54,7 +65,7 @@ document.getElementsByName("return")[0].setAttribute('min', today);
         }
     });
     document.getElementById("result").classList.add("Show");
-    if(arrData){
+    if(flightFound){
       document.getElementById("resultData").innerHTML = arrData;
     }else{
       document.getElementById("resultData").innerHTML = "No Flight Found";
