@@ -20,6 +20,7 @@ button:active { background: #FEFEFE;  border: solid 1px rgb(46, 15, 15);}
 
 .flight-form{text-align: center;color:#c9c9c9;width: 79%;float:right;} 
 .flight-form select{width: 200px; margin: 20px;height:30px;}
+.flight-form input[type=text]{width: 200px; margin: 20px;height:30px;}
 .flight-form label{color: #FFF;font-weight: bold;padding:20px;}
 button{height:40px;width:100px;background-color: #FFC107;
         border: #FFC107;color: #fff; font-size: 20px; border-radius: 20%;}

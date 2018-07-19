@@ -12,10 +12,12 @@ $.ajax({ url: "./fly.json",
   } });
 
 document.getElementById("result").classList.add("Hide");
+var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("depart")[0].setAttribute('min', today);
+document.getElementsByName("return")[0].setAttribute('min', today);
 
 var filterData = {};
 var search = function search(filterData) {
-
   var arrData = "";
   var departDate = filterData.departDate;
   var seatType = filterData.class ? filterData.class : "eco";
@@ -24,10 +26,9 @@ var search = function search(filterData) {
   flightJson.forEach(function (ele) {
     var sd = new Date(ele.departDate);
     if (ele.to == filterData.to && ele.from == filterData.from) {
-      if (+sd === +departDate) {
+      if (+sd <= +departDate) {
         if (ele.class == seatType && ele.price >= price) {
           if (ele.airline === airline) {
-            console.log(ele);
             arrData += " \n                                    <p>\n                                        <span class=\"show-result-data\">" + ele.from + "</span>\n                                        <span class=\"show-result-data\"> " + ele.to + "</span>\n                                        <span class=\"show-result-data\">" + ele.price + "</span>\n                                        <span class=\"show-result-data\">" + ele.airline + "</span>\n                                    </p>                          \n                  ";
           } else if (!airline) {
             arrData += " \n                                    <p>\n                                        <span class=\"show-result-data\">" + ele.from + "</span>\n                                        <span class=\"show-result-data\"> " + ele.to + "</span>\n                                        <span class=\"show-result-data\">" + ele.price + "</span>\n                                        <span class=\"show-result-data\">" + ele.airline + "</span>\n                                    </p>                          \n                  ";

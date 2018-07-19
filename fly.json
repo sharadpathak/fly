@@ -1,71 +1,116 @@
-[{
+[
+  {
+    "class": "eco",
+    "from": "Kolkatta",
+    "to": "Varanasi",
+    "departDate": "2018-07-22",
+    "price": 3000,
+    "departureTime": 1,
+    "airline":"Spice"
+  },
+  {
+    "class": "eco",
+    "from": "Ahemdabad",
+    "to": "Diu",
+    "departDate": "2018-07-22",
+    "price": 3000,
+    "departureTime": 1,
+    "airline":"Spice"
+  },
+  {
   "class": "eco",
-  "from": "bom",
-  "to": "del",
+  "from": "USA",
+  "to": "Delhi",
+  "departDate": "2018-07-22",
+  "price": 3000,
+  "departureTime": 1,
+  "airline":"Spice"
+},
+{
+  "class": "eco",
+  "from": "Ahemdabad",
+  "to": "Delhi",
+  "departDate": "2018-07-22",
+  "price": 3000,
+  "departureTime": 1,
+  "airline":"Spice"
+},
+{
+  "class": "eco",
+  "from": "Bangalore",
+  "to": "Delhi",
   "departDate": "2018-07-22",
   "price": 2000,
   "departureTime": 1,
   "airline":"Spice"
 },{
   "class": "eco",
-  "from": "bom",
-  "to": "del",
+  "from": "Bombay",
+  "to": "Delhi",
+  "departDate": "2018-07-22",
+  "price": 2000,
+  "departureTime": 1,
+  "airline":"Spice"
+},{
+  "class": "eco",
+  "from": "Bombay",
+  "to": "Delhi",
   "departDate": "2018-07-22",
   "price": 4000,
   "departureTime": 1,
   "airline":"Indigo"
 }, {
   "class": "eco",
-  "from": "bom",
-  "to": "del",
+  "from": "Bombay",
+  "to": "Delhi",
   "departDate": "2018-07-22",
   "price": 5000,
   "departureTime": 1,
   "airline":"Spice"
 },{
   "class": "buss",
-  "from": "bom",
-  "to": "del",
+  "from": "Bombay",
+  "to": "Delhi",
   "departDate": "2018-07-22",
   "price": 2000,
   "departureTime": 2,
   "airline":"Indigo"
 }, {
   "class": "buss",
-  "from": "bom",
-  "to": "del",
+  "from": "Bombay",
+  "to": "Delhi",
   "departDate": "2018-07-22",
   "price": 3000,
   "departureTime": 1,
   "airline":"Spice"
 }, {
   "class": "eco",
-  "from": "del",
-  "to": "bom",
+  "from": "Delhi",
+  "to": "Bombay",
   "departDate": "2018-07-22",
   "price": 4000,
   "departureTime": 3,
   "airline":"Indigo"
 }, {
   "class": "eco",
-  "from": "del",
-  "to": "bom",
+  "from": "Delhi",
+  "to": "Bombay",
   "departDate": "2018-07-22",
   "price": 2000,
   "departureTime": 3,
   "airline":"Indigo"
 }, {
   "class": "buss",
-  "from": "del",
-  "to": "bom",
+  "from": "Delhi",
+  "to": "Bombay",
   "departDate": "2018-07-22",
   "price": 5000,
   "departureTime": 2,
   "airline":"Spice"
 }, {
   "class": "buss",
-  "from": "del",
-  "to": "bom",
+  "from": "Delhi",
+  "to": "Bombay",
   "departDate": "2018-07-22",
   "price": 6000,
   "departureTime": 4,

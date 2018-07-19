@@ -67,17 +67,33 @@
                 <div>
                     <div class="left-pane" >
                         <label for="selectForm">From</label>
-                        <select name="selectForm" id="selectForm">
-                            <option value="del">Delhi</option>
-                            <option value="bom">Bombay</option>                        
-                        </select>
+                        <input type="text" id="selectForm" list="source" placeholder="Delhi">
+                        <datalist id="source">
+                            <option value="Delhi">
+                                <option value="Bombay">
+                                <option value="Bangalore">
+                                <option value="Lucknow">
+                                <option value="Diu">
+                                <option value="Kolkatta">
+                                <option value="USA">
+                                <option value="Varanasi">
+                                <option value="Ahemdabad">
+                          </datalist>
                     </div>
                     <div  class="right-pane">
                             <label for="toForm">TO</label>
-                            <select name="toForm" id="toForm">
-                                <option value="del">Delhi</option>
-                                <option value="bom">Bombay</option>                        
-                            </select>
+                            <input type="text" id="toForm" list="destination" placeholder="Bombay">
+                            <datalist id="destination">
+                                <option value="Delhi">
+                                <option value="Bombay">
+                                <option value="Bangalore">
+                                <option value="Lucknow">
+                                <option value="Diu">
+                                <option value="Kolkatta">
+                                <option value="USA">
+                                <option value="Varanasi">
+                                <option value="Ahemdabad">
+                            </datalist>
                     </div>
                 </div>
                 <div class="economySection">
@@ -116,7 +132,7 @@
                         <div>
                             <span id="departDateDiv">
                                     <label for="departDate">Depart</label>
-                                    <input type="date" id="departDate" name="depart">
+                                    <input type="date" id="departDate" name="depart" >
                             </span>
                             <span id="returnDateDiv">
                                     <label for="returnDate">Return</label>

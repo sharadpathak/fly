@@ -2,6 +2,7 @@
 
 var flightJson = [];
 
+
 $.ajax({ url: "./fly.json",
         context: document.body,
         success: (data) => {
@@ -12,12 +13,12 @@ $.ajax({ url: "./fly.json",
         }});
  
 document.getElementById("result").classList.add("Hide");
-
+var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("depart")[0].setAttribute('min', today);
+document.getElementsByName("return")[0].setAttribute('min', today);
 
   var filterData ={};
   var search = (filterData) => {
-
-
     let arrData = "";
     let departDate = filterData.departDate;
     let seatType = filterData.class ? filterData.class : "eco";
@@ -26,7 +27,7 @@ document.getElementById("result").classList.add("Hide");
     flightJson.forEach((ele) => {
       let sd = new Date(ele.departDate);
       if(ele.to == filterData.to  && ele.from == filterData.from) {
-          if(+sd === +departDate) {
+          if(+sd <= +departDate) {
             if ((ele.class == seatType && ele.price >= price)) {
               if(ele.airline === airline) {
                   arrData += ` 
